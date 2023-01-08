@@ -57,9 +57,9 @@ class named:
         return '/'
 
 
-def animemegress(inhtml):
+def animevideomegress(inhtml):
+    html = etree.HTML(inhtml.text)
     output = []
-    html = etree.HTML(inhtml)
     cilian = html.xpath(
         '//tbody/tr/td/a[@class="js-magnet magnet-link"]/@data-clipboard-text')
     name = html.xpath('//tbody/tr/td/a[@class="magnet-link-wrap"]/text()')
@@ -75,3 +75,17 @@ def animemegress(inhtml):
                        row.格式(),  # 取视频格式
                        time[i], size[i], cilian[i]])
     return output
+
+
+def animemegress(inhtml):
+    html = etree.HTML(inhtml.text)
+    listt = html.xpath('//p[@class="bangumi-title"]/text()')  # 获取番名
+    if (listt):
+        l = html.xpath('//p[@class="bangumi-info"]/text()')
+        for i in l:
+            if "放送开始：" in i:
+                day, mouth, year = i[5:].split("/")
+                listt.append("{}/{}/{}".format(year, mouth, day))  # 获得时间
+        listt.extend(html.xpath(
+            '//p[@class="bangumi-info" and text()="官方网站："]/a/text()'))  # 获取官网链接
+        return listt
