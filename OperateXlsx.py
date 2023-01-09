@@ -11,7 +11,7 @@ def outxlsx(listt, title, name):  # 将列表listt输出到"{name}.xlsx"
     wb.save(name+".xlsx")
 
 
-class animeId:
+class animeIds:
 
     def __init__(self, file) -> None:
         self.file = file

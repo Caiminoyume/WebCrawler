@@ -1,6 +1,5 @@
 from PIL import Image
-from OperateHtml import getanime
-from OperateHtml import getphoto
+from OperateHtml import animeweb
 
 
 def toico(infile):
@@ -16,8 +15,8 @@ def toico(infile):
 
 def getanime_photo(animeID):
     imgpath = '.\\file\\images\\'
-    anime = getanime(animeID)
-    img = getphoto(anime)
+    anime = animeweb(animeID)
+    img = anime.getanimephoto()
     with open(imgpath + str(animeID) + '.jpg', "wb") as file:
         file.write(img)
     toico(imgpath + str(animeID) + '.jpg')
