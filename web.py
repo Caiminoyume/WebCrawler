@@ -4,46 +4,23 @@ import datetime
 
 
 class animeweb:
-    def __init__(self, animeID, groupID=None):
+    def __init__(self, animeID):
         self.animeID = animeID
-        self.groupID = groupID
-        # 指定动漫的网页链接
         self.animehttp = "https://mikanani.me/Home/Bangumi/{}".format(
-            self.animeID)
-        # 指定动漫和指定字幕组的网页
-        self.animegrouphttp = "https://mikanani.me/Home/ExpandEpisodeTable?bangumiId={}&subtitleGroupId={}&take=200".format(
-            self.animeID, self.groupID)
+            self.animeID)  # 指定动漫的网页链接
         self.animeweb = None  # 指定动漫的网页
-        self.animegroupweb = None  # 指定动漫和指定字幕组的网页
         self.name = None  # 番名
         self.date = None  # 放送日期
         self.episodes = None  # 总集数
         self.staffhttp = None  # 官网
         self.bangumihttp = None  # Bangumi计划链接
+        self.groups = None  # 各字幕组ID
         self.imagehttp = None  # 主视觉图链接
         self.image = None  # 主视觉图
-
-    def setgroupID(self, groupID):
-        self.groupID = groupID
-        self.animegrouphttp = "https://mikanani.me/Home/ExpandEpisodeTable?bangumiId={}&subtitleGroupId={}&take=200".format(
-            self.animeID, self.groupID)  # take：最大条目
 
     def getanimeweb(self):
         self.animeweb = gethtml(self.animehttp)
         return self.animeweb
-
-    def getanimegroupweb(self):
-        if self.groupID == None:
-            print('请指定字幕组！')
-            return self.animeweb
-        self.animegroupweb = gethtml(self.animegrouphttp)
-        return self.animegroupweb
-
-    def getanimeimage(self):
-        if self.imagehttp == None:
-            self.getanimedata()
-        self.image = requests.get(self.imagehttp).content
-        return self.image
 
     def getanimedata(self):
         if self.animeweb == None:
@@ -64,8 +41,27 @@ class animeweb:
             '//div[@class="bangumi-poster"]/@style')[0].split("'")[1]
         self.imagehttp = 'https://mikanani.me{}'.format(picture)
 
+    def getanimeimage(self):
+        if self.imagehttp == None:
+            self.getanimedata()
+        self.image = requests.get(self.imagehttp).content
+        return self.image
+
     def saveweb(self):
         savehtml(self.animeweb, self.animeID)
+
+
+class animegroupweb:
+    def __init__(self, animeID, groupID) -> None:
+        self.animeID = animeID
+        self.groupID = groupID
+        self.animegrouphttp = "https://mikanani.me/Home/ExpandEpisodeTable?bangumiId={}&subtitleGroupId={}&take=200".format(
+            self.animeID, self.groupID)  # 指定动漫和指定字幕组的网页链接
+        self.animegroupweb = None  # 指定动漫和指定字幕组的网页
+
+    def getanimegroupweb(self):
+        self.animegroupweb = gethtml(self.animegrouphttp)
+        return self.animegroupweb
 
 
 def gethtml(http):
