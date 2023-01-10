@@ -19,7 +19,7 @@ class animeweb:
         self.image = None  # 主视觉图
 
     def getanimeweb(self):
-        self.animeweb = gethtml(self.animehttp)
+        self.animeweb = getweb(self.animehttp)
         return self.animeweb
 
     def getanimedata(self):
@@ -60,12 +60,12 @@ class animegroupweb:
         self.animegroupweb = None  # 指定动漫和指定字幕组的网页
 
     def getanimegroupweb(self):
-        self.animegroupweb = gethtml(self.animegrouphttp)
+        self.animegroupweb = getweb(self.animegrouphttp)
         return self.animegroupweb
 
 
-def gethtml(http):
-    print('正在访问服务器...(超链接：%s)' % http)
+def getweb(http):
+    print('正在访问服务器...(目标：%s)' % http)
     f = requests.get(http)
     f.encoding = "utf-8"
     if f.status_code == 200:
