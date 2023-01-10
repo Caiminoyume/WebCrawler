@@ -1,5 +1,5 @@
 from OperateXlsx import animeIds
-from OperateHtml import animeweb
+from web import animeweb
 from animedata import animemegress
 
 
