@@ -18,11 +18,15 @@ class animeweb:
         self.imagehttp = ''  # 主视觉图链接
         self.image = None  # 主视觉图（requests.content实例）
 
+    class IDnotExist(Exception):
+        pass
+
     def getanimeweb(self):
+
         try:
             self.animeweb = getweb(self.animehttp)
         except URlmoveError:
-            raise IDnotExist('该ID的动漫不存在')
+            raise animeweb.IDnotExist('该ID的动漫不存在')
         return self.animeweb
 
     def getanimedata(self):
@@ -59,6 +63,13 @@ class animeweb:
         if self.animeweb == None:
             self.getanimeweb()
         savehtml(self.animeweb, self.animeID)
+
+    def saveimage(self):
+        imgfile = '.\\file\\images\\' + str(self.animeID) + '.jpg'
+        if self.image == None:
+            self.getanimeimage()
+        with open(imgfile, "wb") as file:
+            file.write(self.image)
 
 
 class animegroupweb:
@@ -98,10 +109,6 @@ class animegroupweb:
 
 
 class URlmoveError(Exception):
-    pass
-
-
-class IDnotExist(Exception):
     pass
 
 

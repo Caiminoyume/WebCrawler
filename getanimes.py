@@ -1,6 +1,5 @@
 from OperateXlsx import animeIDs
 from web import animeweb
-from web import IDnotExist
 
 
 def getanimesdata(l, r):  # 总番剧数：2879
@@ -11,7 +10,7 @@ def getanimesdata(l, r):  # 总番剧数：2879
         anime = animeweb(animeID)
         try:
             anime.getanimeweb()
-        except IDnotExist:
+        except animeweb.IDnotExist:
             continue
         listt.append(anime.name)
         listt.append(anime.date)
