@@ -8,15 +8,15 @@ class animeweb:
         self.animeID = animeID
         self.animehttp = "https://mikanani.me/Home/Bangumi/{}".format(
             self.animeID)  # 指定动漫的网页链接
-        self.animeweb = None  # 指定动漫的网页
-        self.name = None  # 番名
-        self.date = None  # 放送日期
-        self.episodes = None  # 总集数
-        self.staffhttp = None  # 官网
-        self.bangumihttp = None  # Bangumi计划链接
+        self.animeweb = None  # 指定动漫的网页（requests实例）
+        self.name = ''  # 番名
+        self.date = None  # 放送日期（datetime实例）
+        self.episodes = 0  # 总集数
+        self.staffhttp = ''  # 官网
+        self.bangumihttp = ''  # Bangumi计划链接
         self.groups = []  # 各字幕组名称及ID
-        self.imagehttp = None  # 主视觉图链接
-        self.image = None  # 主视觉图
+        self.imagehttp = ''  # 主视觉图链接
+        self.image = None  # 主视觉图（requests.content实例）
 
     def getanimeweb(self):
         try:
@@ -67,7 +67,7 @@ class animegroupweb:
         self.groupID = groupID
         self.animegrouphttp = "https://mikanani.me/Home/ExpandEpisodeTable?bangumiId={}&subtitleGroupId={}&take=200".format(
             self.animeID, self.groupID)  # 指定动漫和指定字幕组的网页链接
-        self.animegroupweb = None  # 指定动漫和指定字幕组的网页
+        self.animegroupweb = None  # 指定动漫和指定字幕组的网页（requests实例）
         self.videosdata = []  # 存放一系列视频的信息，其中每个元素都是一个字典，分别有'magnet''message''filesizes''time'四个键
 
     def getanimegroupweb(self):

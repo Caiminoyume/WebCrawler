@@ -2,7 +2,7 @@ from PIL import Image
 from web import animeweb
 
 
-def saveanimeimage(animeID):
+def saveanimeimage(animeID):  # 会自动调用toico
     imgpath = '.\\file\\images\\'
     anime = animeweb(animeID)
     img = anime.getanimeimage()
