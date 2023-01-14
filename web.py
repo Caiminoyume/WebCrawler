@@ -14,12 +14,15 @@ class animeweb:
         self.episodes = None  # 总集数
         self.staffhttp = None  # 官网
         self.bangumihttp = None  # Bangumi计划链接
-        self.groups = None  # 各字幕组ID
+        self.groups = []  # 各字幕组名称及ID
         self.imagehttp = None  # 主视觉图链接
         self.image = None  # 主视觉图
 
     def getanimeweb(self):
-        self.animeweb = getweb(self.animehttp)
+        try:
+            self.animeweb = getweb(self.animehttp)
+        except URlmoveError:
+            raise IDnotExist('该ID的动漫不存在')
         return self.animeweb
 
     def getanimedata(self):
@@ -40,6 +43,11 @@ class animeweb:
         picture = html.xpath(
             '//div[@class="bangumi-poster"]/@style')[0].split("'")[1]
         self.imagehttp = 'https://mikanani.me{}'.format(picture)
+        for item in html.xpath('//ul[@class="list-unstyled"]/li/span/a'):
+            groupdata = {}
+            groupdata['name'] = item.xpath('text()')[0]
+            groupdata['ID'] = item.xpath('@data-anchor')[0][1:]
+            self.groups.append(groupdata)
 
     def getanimeimage(self):
         if self.imagehttp == None:
@@ -89,14 +97,19 @@ class animegroupweb:
         savehtml(self.animegroupweb, self.animeID)
 
 
+class URlmoveError(Exception):
+    pass
+
+
+class IDnotExist(Exception):
+    pass
+
+
 def getweb(http):
-    print('正在访问服务器...(目标：%s)' % http)
+    print('正在访问：%s' % http)
     f = requests.get(http)
-    f.encoding = "utf-8"
-    if f.status_code == 200:
-        print('已连接')
-    else:
-        print(f.status_code)
+    if str(f.url) != http:
+        raise URlmoveError('服务器将原地址定位到别处')
     return f
 
 
@@ -104,3 +117,7 @@ def savehtml(html, filename):
     htmlpath = '.\\file\\htmls\\'
     with open(htmlpath + "%s.html" % filename, "w", encoding="utf") as file:
         file.write(html.text)
+
+
+if __name__ == "__main__":
+    pass
