@@ -2,6 +2,15 @@ from PIL import Image
 from web import animeweb
 
 
+def saveanimeimage(animeID):
+    imgpath = '.\\file\\images\\'
+    anime = animeweb(animeID)
+    img = anime.getanimeimage()
+    with open(imgpath + str(animeID) + '.jpg', "wb") as file:
+        file.write(img)
+    toico(imgpath + str(animeID) + '.jpg')
+
+
 def toico(infile):
     icopath = '.\\file\\icos\\'
     im = Image.open(infile)
@@ -12,12 +21,3 @@ def toico(infile):
                       (max_edge - height) // 2))  # 将图片粘贴到画布上
     im_512 = canvas.resize((256, 256))  # 将图片转换为256*256
     im_512.save(icopath + '主视觉图.ico')  # 保存ico图标
-
-
-def saveanimeimage(animeID):
-    imgpath = '.\\file\\images\\'
-    anime = animeweb(animeID)
-    img = anime.getanimeimage()
-    with open(imgpath + str(animeID) + '.jpg', "wb") as file:
-        file.write(img)
-    toico(imgpath + str(animeID) + '.jpg')
