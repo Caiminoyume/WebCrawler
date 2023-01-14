@@ -7,6 +7,7 @@ from web import animegroupweb
 
 
 def main():
+    pass
     a = animegroupweb(2822, 48)
     a.getvideosdata()
     print(a.videosdata)
