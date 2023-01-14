@@ -3,15 +3,13 @@ from getanimes import getanimesdata
 # 输入要求：（animeID）；作用，获得番的主视觉图.ico
 from getico import saveanimeimage
 from web import animeweb
+from web import animegroupweb
 
 
 def main():
-    #getanimesdata(2882, 3000)
-    saveanimeimage(2833)
-    # a = animeweb(2822)
-    # ah = a.getanimedata()
-    # print(ah)
-    # savehtml(ah, 'abc')
+    a = animegroupweb(2822, 48)
+    a.getvideosdata()
+    print(a.videosdata)
 
 
 if __name__ == '__main__':
