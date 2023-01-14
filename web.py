@@ -14,7 +14,7 @@ class animeweb:
         self.episodes = 0  # 总集数
         self.staffhttp = ''  # 官网
         self.bangumihttp = ''  # Bangumi计划链接
-        self.groups = []  # 各字幕组名称及ID
+        self.groups = []  # 各字幕组名称及ID，每个元素都是一个字典，分别有'name''ID'两个键
         self.imagehttp = ''  # 主视觉图链接
         self.image = None  # 主视觉图（requests.content实例）
 
@@ -22,7 +22,6 @@ class animeweb:
         pass
 
     def getanimeweb(self):
-
         try:
             self.animeweb = getweb(self.animehttp)
         except URlmoveError:
