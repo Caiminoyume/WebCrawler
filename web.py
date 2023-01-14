@@ -48,6 +48,8 @@ class animeweb:
         return self.image
 
     def saveweb(self):
+        if self.animeweb == None:
+            self.getanimeweb()
         savehtml(self.animeweb, self.animeID)
 
 
@@ -58,10 +60,33 @@ class animegroupweb:
         self.animegrouphttp = "https://mikanani.me/Home/ExpandEpisodeTable?bangumiId={}&subtitleGroupId={}&take=200".format(
             self.animeID, self.groupID)  # 指定动漫和指定字幕组的网页链接
         self.animegroupweb = None  # 指定动漫和指定字幕组的网页
+        self.videosdata = []  # 存放一系列视频的信息，其中每个元素都是一个字典，分别有'magnet''message''filesizes''time'四个键
 
     def getanimegroupweb(self):
         self.animegroupweb = getweb(self.animegrouphttp)
         return self.animegroupweb
+
+    def getvideosdata(self):
+        if self.animegroupweb == None:
+            self.getanimegroupweb()
+        html = etree.HTML(self.animegroupweb.text)
+        for item in html.xpath('//tbody/tr'):
+            data = {}
+            data['magnet'] = item.xpath(
+                'td/a[@class="js-magnet magnet-link"]/@data-clipboard-text')[0]
+            data['message'] = item.xpath(
+                'td/a[@class="magnet-link-wrap"]/text()')[0]
+            data['filesizes'] = item.xpath('td[2]/text()')[0]
+            date, time = item.xpath('td[3]/text()')[0].split()
+            year, month, day = map(int, date.split("/"))
+            hour, minute = map(int, time.split(":"))
+            data['time'] = datetime.datetime(year, month, day, hour, minute)
+            self.videosdata.append(data)
+
+    def saveweb(self):
+        if self.animegroupweb == None:
+            self.getanimegroupweb()
+        savehtml(self.animegroupweb, self.animeID)
 
 
 def getweb(http):
