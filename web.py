@@ -3,6 +3,10 @@ from lxml import etree  # 解析HTML
 import datetime
 
 
+def main():  # 测试用
+    pass
+
+
 class animeweb:
     def __init__(self, animeID):
         self.animeID = animeID
@@ -126,4 +130,4 @@ def savehtml(html, filename):
 
 
 if __name__ == "__main__":
-    pass
+    main()

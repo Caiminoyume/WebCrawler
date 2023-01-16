@@ -2,6 +2,11 @@ from PIL import Image
 from web import animeweb
 
 
+def main():  # 测试用
+    aimg = animeimage(2833)
+    aimg.getico()
+
+
 class animeimage:
     def __init__(self, animeID):
         self.animeID = animeID
@@ -30,6 +35,4 @@ class animeimage:
 
 
 if __name__ == "__main__":
-    # 使用方法
-    aimg = animeimage(2833)
-    aimg.getico()
+    main()
