@@ -4,6 +4,9 @@ import datetime
 
 
 def main():  # 测试用
+    a = animeweb(2822)
+    a.getanimedata()
+    print(a.groups)
     pass
 
 
