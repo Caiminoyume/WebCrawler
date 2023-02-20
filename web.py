@@ -3,7 +3,7 @@ from lxml import etree  # 解析HTML
 import datetime
 
 
-def main():  # 测试用
+def debug():  # 测试用
     a = animeweb(2822)
     a.getanimedata()
     print(a.groups)
@@ -133,4 +133,4 @@ def savehtml(html, filename):
 
 
 if __name__ == "__main__":
-    main()
+    debug()

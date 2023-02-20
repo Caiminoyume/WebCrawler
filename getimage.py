@@ -2,7 +2,7 @@ from PIL import Image
 from web import animeweb
 
 
-def main():  # 测试用
+def debug():  # 测试用
     aimg = animeimage(2833)
     aimg.getico()
 
@@ -35,4 +35,4 @@ class animeimage:
 
 
 if __name__ == "__main__":
-    main()
+    debug()
