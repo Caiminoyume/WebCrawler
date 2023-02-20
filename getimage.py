@@ -10,8 +10,8 @@ def main():  # 测试用
 class animeimage:
     def __init__(self, animeID):
         self.animeID = animeID
-        self.imgfile = '.\\file\\images\\' + str(self.animeID) + '.jpg'
-        self.icopath = '.\\file\\icos\\'
+        self.imgfile = './file/images/' + str(self.animeID) + '.jpg'
+        self.icopath = './file/icos/'
 
     def getimage(self):
         anime = animeweb(self.animeID)

@@ -60,7 +60,7 @@ class animeweb:
             self.groups.append(groupdata)
 
     def getanimeimage(self):
-        if self.imagehttp == None:
+        if self.imagehttp == "":
             self.getanimedata()
         self.image = requests.get(self.imagehttp).content
         return self.image
@@ -71,7 +71,7 @@ class animeweb:
         savehtml(self.animeweb, self.animeID)
 
     def saveimage(self):
-        imgfile = '.\\file\\images\\' + str(self.animeID) + '.jpg'
+        imgfile = './file/images/' + str(self.animeID) + '.jpg'
         if self.image == None:
             self.getanimeimage()
         with open(imgfile, "wb") as file:
@@ -79,7 +79,7 @@ class animeweb:
 
 
 class animegroupweb:
-    def __init__(self, animeID, groupID) -> None:
+    def __init__(self, animeID, groupID):
         self.animeID = animeID
         self.groupID = groupID
         self.animegrouphttp = "https://mikanani.me/Home/ExpandEpisodeTable?bangumiId={}&subtitleGroupId={}&take=200".format(
@@ -127,7 +127,7 @@ def getweb(http):
 
 
 def savehtml(html, filename):
-    htmlpath = '.\\file\\htmls\\'
+    htmlpath = './file/htmls/'
     with open(htmlpath + "%s.html" % filename, "w", encoding="utf") as file:
         file.write(html.text)
 
