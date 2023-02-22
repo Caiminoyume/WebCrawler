@@ -4,9 +4,17 @@ import datetime
 
 
 def debug():  # 测试用
-    a = animeweb(2822)
+    a = animeweb(2883)
     a.getanimedata()
-    print(a.groups)
+    with open('./file/data.txt', "w", encoding="utf") as file:
+        for group in a.groups:
+            animegroup = animegroupweb(2883, group['ID'])
+            animegroup.getvideosdata()
+            for i in animegroup.videosdata:
+                file.write(i['message'])
+                file.write('\n')
+                print(i['message'])
+
     pass
 
 

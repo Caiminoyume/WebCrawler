@@ -1,0 +1,306 @@
+我需要提取一些数据，比如集数（01），分辨率（720P，1080P，4K），视频位深（8bit，10bit），视频编码格式（AVC，HEVC，AV1等），音频编码格式（ACC，FLAC等），字幕语言（简繁日等），字幕封装方式（内嵌，内封，外挂），
+视频格式（MKV，MP4等），视频源（WebRip,BDRip等），WebRip的又分为（B-Global，Baha，CR）
+
+请注意同种意思的不同表达方式，比如简体可能出现的方式有“简体”“简”“GB”“CHS”“chs”，繁体有“繁体”“繁”“BIG5”“CHT”“cht”
+集数可能的方式有：[01],[01集],[第01话],[01v2],[01][v2]，并且请注意10和1080P的混淆，并且还可能出现[01-12]的表达方式，并且有概率出现[11.5]之类的集数
+用英文的关键字可能会出现大小写的问题，比如“HVEC”和“hevc”，”1080p“和”1080P“之类的分别
+WebRip和WEB-DL是同一个表示
+
+对于不同形式同种意思的，统一规范为我第一段括号内的形式，如果文本中没有提示，则为“/”
+
+
+下面是两个规范示例：                                                                           集数    分辨率  位深    视频编码    音频编码    字幕语言    字幕封装    格式    视频源    源
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 04 (CR 1920x1080 AVC AAC MKV)                 04      1080P   /       AVC      AAC        /          /        MKV    WebRip   CR
+[7³ACG] 莉可丽丝/リコリス・リコイル/Lycoris Recoil | 01-13 [简繁英字幕] BDrip 1080p x265 FLAC     01-13   1080P   /       HEVC      FLAC     简繁英       /         /     BDrip     /
+
+
+ 
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][04集][1080P][AVC][繁日双语] 
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][04集][720P][AVC][繁日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][04集][1080P][AVC][简日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][04集][720P][AVC][简日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][03集][1080P][AVC][繁日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][03集][720P][AVC][繁日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][03集][1080P][AVC][简日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][03集][720P][AVC][简日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][02集][1080P][AVC][繁日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][02集][720P][AVC][繁日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][02集][1080P][AVC][简日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][02集][720P][AVC][简日双语]
+[V2][织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][01集][1080P][AVC][繁日双语]
+[V2][织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][01集][720P][AVC][繁日双语]
+[V2][织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][01集][720P][AVC][简日双语]
+[V2][织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][01集][1080P][AVC][简日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][01集][720P][AVC][简日双语]
+[织梦字幕组][别当欧尼酱了 お兄ちゃんはおしまい][01集][1080P][AVC][简日双语]
+[北宇治字幕组][无障碍字幕][OnimaiOniichan wa Oshimai!/别当欧尼酱了][04][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][07][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][07][HEVC_AAC][CHS][CC付][MKV][无修正][V2]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][07][HEVC_AAC][CHS][CC付][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][07][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][无障碍字幕][OnimaiOniichan wa Oshimai!/别当欧尼酱了][05][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][无障碍字幕][OnimaiOniichan wa Oshimai!别当欧尼酱了][06][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][06][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][06][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][05][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][05][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][无障碍字幕][OnimaiOniichan wa Oshimai!别当欧尼酱了][03][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][04][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][04][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][无障碍字幕][OnimaiOniichan wa Oshimai!别当欧尼酱了][02][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][03][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][03][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][无障碍字幕][OnimaiOniichan wa Oshimai!别当欧尼酱了][01][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][02][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][02][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][01][HEVC_AAC][CHS][MP4][无修正]
+[北宇治字幕组][Oniichan ha Oshimai!][别当欧尼酱了][01][HEVC_AAC][CHS][MKV][无修正]
+[北宇治字幕组][Onimai][别当欧尼酱了][01先行版][HEVC_AAC][CHS][MP4]
+[北宇治字幕组][Onimai][别当欧尼酱了][01先行版][HEVC_AAC][CHS][MKV]
+[云光字幕组] 别当欧尼酱了！  Onii-chan wa Oshimai! [07][简体双语][1080p]招募翻译
+[云光字幕组] 别当欧尼酱了！  Onii-chan wa Oshimai! [06][简体双语][1080p]招募翻译
+[云光字幕组] 别当欧尼酱了！  Onii-chan wa Oshimai! [05][简体双语][1080p]招募翻译
+[云光字幕组] 别当欧尼酱了！  Onii-chan wa Oshimai! [04][简体双语][1080p]招募翻译
+[云光字幕组] 别当欧尼酱了！  Onii-chan wa Oshimai! [03][简体双语][1080p]招募翻译
+[云光字幕组] 别当欧尼酱了！  Onii-chan wa Oshimai! [02][简体双语][1080p]招募翻译
+[云光字幕组] 别当欧尼酱了！  Onii-chan wa Oshimai! [01][简体双语][1080p]招募翻译
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][07][繁日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][07][简日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][06][繁日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][06][简日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][05][繁日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][05][简日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][04][繁日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][04][简日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][03][繁日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][03][简日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][02][繁日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][02][简日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][01][繁日双语][1080P][WEBrip][MP4]
+[星空字幕组][别当欧尼酱了！/ 别当哥哥了！/ Oniichan wa Oshimai!][01][简日双语][1080P][WEBrip][MP4]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][07][1080p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][07][720p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][07][1080p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][07][720p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][05][1080p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][05][1080p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][05][720p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][05][720p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][06][720p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][06][1080p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][06][1080p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][06][720p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][04][1080p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][04][1080p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][04][720p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][04][720p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][03][720p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][03][1080p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][03][1080p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][03][720p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][02][1080p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][02][720p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][02][1080p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][02][720p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][01][1080p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][01][1080p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][01][720p][繁日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][01][720p][简日双语][招募翻译]
+【喵萌奶茶屋】★01月新番★[不当哥哥了！ / Oniichan wa Oshimai! / Onimai][01][1080p][简体][先行版][招募翻译]
+[桜都字幕组] 不当哥哥了！ / Onii-chan wa Oshimai! [未删减] [07][1080p][繁体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [07][1080p][简体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [07][1080p][简繁内封]
+[桜都字幕组] 不当哥哥了！ / Onii-chan wa Oshimai! [未删减] [06][1080p][繁体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [06][1080p][简体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [06][1080p][简繁内封]
+[桜都字幕组] 不当哥哥了！ / Onii-chan wa Oshimai! [未删减] [05][1080p][繁体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [05][1080p][简体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [05][1080p][简繁内封]
+[桜都字幕组] 不当哥哥了！ / Onii-chan wa Oshimai! [未删减] [04][1080p][繁体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [04][1080p][简体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [04][1080p][简繁内封]
+[桜都字幕组] 不当哥哥了！ / Onii-chan wa Oshimai! [未删减] [03][1080p][繁体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [03][1080p][简体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减] [03][1080p][简繁内封]
+[桜都字幕组] 不当哥哥了！ / Onii-chan wa Oshimai! [未删减][02][1080p][繁体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减][02][1080p][简体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [未删减02][1080p][简繁内封]
+[桜都字幕组] 不当哥哥了！ / Onii-chan wa Oshimai! [01][1080p][繁体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [01][1080p][简体内嵌]
+[桜都字幕组] 别当欧尼酱了！ / Onii-chan wa Oshimai! [01][1080p][简繁内封]
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [07] 1080P mp4 hevc 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [07] 1080P mp4 av1 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [07][v2] 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [07] 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [06] 1080P mp4 hevc 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [06] 1080P mp4 av1 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [06][v2] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [06] 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [05] 1080P mp4 hevc 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [05] 1080P mp4 av1 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [05][v2] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [05] 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [04] 1080P mp4 hevc 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [04] 1080P mp4 av1 简日内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [04][v2] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [04] 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [03] 1080P mp4 hevc 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [03] 1080P mp4 av1 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [03][v2] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [03] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) 预告 [03] 1080P mp4 avc 简日内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) 预告 [03] 1080P mp4 av1 简日内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) 预告 [03] 1080P mkv 简日内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [02][v2] 1080P 无修正 mp4 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Oniichan ha Oshimai!) [02][v2] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [02] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [01] 1080P 安全版 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [01][v3] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) 预告 [02]v2 1080P mkv 简日内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) 预告 [02] 1080P mkv 简日内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) NCOPED 1080P 外挂字幕附 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [01][v2] 1080P 无修正 mp4 简中内嵌 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [01][v2] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[氢气烤肉架] 别当欧尼酱了(Onii-chan wa Oshimai!) [01] 1080P 无修正 mkv 简中内封 （检索用：不当哥哥了）
+[轻之国度字幕组][别当欧尼酱了!/不当哥哥了！][07][AT-X][720P][MP4]
+[轻之国度字幕组][别当欧尼酱了!/不当哥哥了！][06][AT-X][720P][MP4]
+[轻之国度字幕组][别当欧尼酱了!/不当哥哥了！][05][AT-X][720P][MP4]
+[轻之国度字幕组][别当欧尼酱了!/不当哥哥了！][04][AT-X][720P][MP4]
+[轻之国度字幕组][别当欧尼酱了!/不当哥哥了！][03][AT-X][720P][MP4]
+[轻之国度字幕组][别当欧尼酱了!/不当哥哥了！][02][AT-X][720P][MP4]
+[轻之国度字幕组][别当欧尼酱了!/不当哥哥了！][01][GB][720P][MP4]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [07][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [07][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [05v2][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [05v2][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [06][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [06][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [05][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [05][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [04v2][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [04v2][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [04][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [04][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [03][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [03v2][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [03][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [02][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [02][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [01][1080p][简繁日内封]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [01][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / 别当欧尼酱了！ / Onii-chan wa Oshimai! [01v2][先行版][1080p][简日内嵌]
+[MingY&熔岩动画Sub] 别当哥哥了！ / Onii-chan wa Oshimai! [01][先行版][1080p][简日内嵌]
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][07][WebRip][1080P][AVC 8bit][繁日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][07][WebRip][1080P][AVC 8bit][简日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][06][WebRip][1080P][AVC 8bit][繁日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][06][WebRip][1080P][AVC 8bit][简日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][05][WebRip][1080P][AVC 8bit][繁日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][05][WebRip][1080P][AVC 8bit][简日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][04][WebRip][1080P][AVC 8bit][繁日双语][无修版][v2]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][04][WebRip][1080P][AVC 8bit][简日双语][无修版][v2]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][03][WebRip][1080P][AVC 8bit][繁日内嵌][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][03][WebRip][1080P][AVC 8bit][简日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][02][WebRip][1080P][AVC 8bit][繁日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][02][WebRip][1080P][AVC 8bit][简日双语][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][01][WebRip][1080P][AVC 8bit][繁日内嵌][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][01][WebRip][1080P][AVC 8bit][简日内嵌][无修版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][02][WebRip][1080P][AVC 8bit][繁体内嵌][先行版][v2]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][02][WebRip][1080P][AVC 8bit][简体内嵌][先行版][v2]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][01][WebRip][1080P][AVC 8bit][繁体内嵌][先行版]（检索用：别当欧尼酱了！）
+[SweetSub][不当哥哥了！][Oniichan ha Oshimai!][01][WebRip][1080P][AVC 8bit][简体内嵌][先行版]（检索用：别当欧尼酱了！）
+[SweetSub&LoliHouse] 不当哥哥了！/ Oniichan ha Oshimai! - 07 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕]（检索用：别当欧尼酱了！）
+[SweetSub&LoliHouse] 不当哥哥了！/ Oniichan ha Oshimai! - 06 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕]（检索用：别当欧尼酱了！）
+[SweetSub&LoliHouse] 不当哥哥了！/ Oniichan ha Oshimai! - 05 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕]（检索用：别当欧尼酱了！）
+[SweetSub&LoliHouse] 不当哥哥了！/ Oniichan ha Oshimai! - 04v2 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕]（检索用：别当欧尼酱了！）
+[SweetSub&LoliHouse] 不当哥哥了！/ Oniichan ha Oshimai! - 03 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕]（检索用：别当欧尼酱了！）
+[SweetSub&LoliHouse] 不当哥哥了！/ Oniichan ha Oshimai! - 02 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕]（检索用：别当欧尼酱了！）
+[SweetSub&LoliHouse] 不当哥哥了！/ Oniichan ha Oshimai! - 01 [WebRip 1080p HEVC-10bit AAC][简繁日内封字幕]（检索用：别当欧尼酱了！）
+[天月搬运组] 不当哥哥了！ / Oniichan wa Oshimai! - 07 [1080P][简繁日外挂]
+[天月搬运组] 不当哥哥了！ / Oniichan wa Oshimai! - 06 [1080P][简繁日外挂]
+[天月搬运组] 不当哥哥了！ / Oniichan wa Oshimai! - 05 [1080P][简繁日外挂]
+[天月搬运组] 不当哥哥了！ / Oniichan wa Oshimai! - 04 [1080P][简繁日外挂]
+[天月搬运组] 不当哥哥了！ / Oniichan wa Oshimai! - 03 [1080P][简繁日外挂]
+[天月搬运组] 不当哥哥了！ / Oniichan wa Oshimai! - 02 [1080P][简繁日外挂]
+[天月搬运组] 不当哥哥了！ / Oniichan wa Oshimai! - 01 [1080P][简繁日外挂]
+【动漫国字幕组】★01月新番[不当哥哥了!][06][1080P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][06][1080P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][06][720P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][06][720P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][05][1080P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][05][1080P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][05][720P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][05][720P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][04][1080P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][04][1080P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][04][720P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][04][720P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][03][1080P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][03][1080P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][03][720P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][03][720P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][02][1080P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][02][1080P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][02][720P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][02][720P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][01][1080P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][01][1080P][繁体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][01][720P][简体][MP4]
+【动漫国字幕组】★01月新番[不当哥哥了!][01][720P][繁体][MP4]
+[神楽坂 まひろ] 不当哥哥了！ / Oniichan wa Oshimai! - 07 (CR 1920x1080 AVC AAC MKV)
+[神楽坂 まひろ] 别当欧尼酱了！ / Oniichan wa Oshimai! - 07 (B-Global 1920x1080 HEVC AAC MKV)
+[神乐坂 まひろ] 不当哥哥了！ / Oniichan wa Oshimai! - 06 (CR 1920x1080 AVC AAC MKV)
+[神乐坂 まひろ] 不当哥哥了！ / Oniichan wa Oshimai! - 06 (Baha 1920x1080 AVC AAC MP4)
+[神乐坂 まひろ] 别当欧尼酱了！ / Oniichan wa Oshimai! - 06 (B-Global 1920x1080 HEVC AAC MKV)
+[Lilith-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 07 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]
+[Lilith-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 06 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]
+[Lilith-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 05 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]
+[Lilith-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 04 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]
+[Lilith-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 03 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]
+[Lilith-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 02 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]
+[Lilith-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 01 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]
+[ANi] ONIMAI Im Now Your Sister -  不当哥哥了！ - 07 [1080P][Baha][WEB-DL][AAC AVC][CHT][MP4]
+[ANi] ONIMAI Im Now Your Sister -  不当哥哥了！ - 06 [1080P][Baha][WEB-DL][AAC AVC][CHT][MP4]
+[ANi] ONIMAI Im Now Your Sister -  不当哥哥了！ - 05 [1080P][Baha][WEB-DL][AAC AVC][CHT][MP4]
+[ANi] ONIMAI Im Now Your Sister -  不当哥哥了！ - 04 [1080P][Baha][WEB-DL][AAC AVC][CHT][MP4]
+[ANi] ONIMAI Im Now Your Sister -  不当哥哥了！ - 03 [1080P][Baha][WEB-DL][AAC AVC][CHT][MP4]
+[ANi] ONIMAI Im Now Your Sister -  不当哥哥了！ - 02 [1080P][Baha][WEB-DL][AAC AVC][CHT][MP4]
+[ANi] ONIMAI Im Now Your Sister -  不当哥哥了！ - 01 [1080P][Baha][WEB-DL][AAC AVC][CHT][MP4]
+[爱恋字幕社][1月新番][不当哥哥了！][Oniichan ha Oshimai!][06v2][1080P][MP4][BIG5][繁中][无修版]
+[爱恋字幕社][1月新番][不当哥哥了！][Oniichan ha Oshimai!][06][1080P][MP4][BIG5][繁中][无修版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][06][1080P][MP4][GB][简中][无修版]
+[爱恋字幕社][1月新番][不当哥哥了！][Oniichan ha Oshimai!][05][1080P][MP4][BIG5][繁中][无修版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][05][1080P][MP4][GB][简中][无修版]
+[爱恋字幕社][1月新番][不当哥哥了！][Oniichan ha Oshimai!][04][1080P][MP4][BIG5][繁中][无修版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][04][1080P][MP4][GB][简中][无修版]
+[爱恋字幕社][1月新番][不当哥哥了！][Oniichan ha Oshimai!][03][1080P][MP4][BIG5][繁中][无修版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][03][1080P][MP4][GB][简中][无修版]
+[爱恋字幕社][1月新番][不当哥哥了！][Oniichan ha Oshimai!][02][1080P][MP4][BIG5][繁中][无修版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][02][1080P][MP4][GB][简中][无修版]
+[爱恋字幕社][1月新番][不当哥哥了！][Oniichan ha Oshimai!][01][1080P][MP4][BIG5][繁中][无修版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][01][1080P][MP4][GB][简中][无修版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][01][1080P][MP4][BIG5][繁中][先行版]
+[爱恋字幕社][1月新番][别当欧尼酱了！][Oniichan ha Oshimai!][01][1080P][MP4][GB][简中][先行版]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第04话][1080p_HEVC][简繁内封]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第04话][1080p_AVC][繁体]
+[千夏字幕组][别当欧尼酱了！_Oniichan wa Oshimai!][第04话][1080p_AVC][简体]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第03话][1080p_HEVC][简繁内封]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第03话][1080p_AVC][繁体]
+[千夏字幕组][别当欧尼酱了！_Oniichan wa Oshimai!][第03话][1080p_AVC][简体]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第02话][1080p_HEVC][简繁内封]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第02话][1080p_AVC][繁体]
+[千夏字幕组][别当欧尼酱了！_Oniichan wa Oshimai!][第02话][1080p_AVC][简体]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第01话][1080p_HEVC][简繁内封]
+[千夏字幕组][不当哥哥了！_Oniichan wa Oshimai!][第01话][1080p_AVC][繁体]
+[千夏字幕组][别当欧尼酱了！_Oniichan wa Oshimai!][第01话][1080p_AVC][简体]
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 04 (CR 1920x1080 AVC AAC MKV)
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 04 (Baha 1920x1080 AVC AAC MP4)
+[NC-Raws] 别当欧尼酱了！ / Oniichan wa Oshimai! - 04 (B-Global 1920x1080 HEVC AAC MKV)
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 03 (CR 1920x1080 AVC AAC MKV)
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 03 (Baha 1920x1080 AVC AAC MP4)
+[NC-Raws] 别当欧尼酱了！ / Oniichan wa Oshimai! - 03 (B-Global 1920x1080 HEVC AAC MKV)
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 02 (CR 1920x1080 AVC AAC MKV)
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 02 (Baha 1920x1080 AVC AAC MP4)
+[NC-Raws] 别当欧尼酱了！ / Oniichan wa Oshimai! - 02 (B-Global 1920x1080 HEVC AAC MKV)
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 01 (CR 1920x1080 AVC AAC MKV)
+[NC-Raws] 不当哥哥了！ / Oniichan wa Oshimai! - 01 (Baha 1920x1080 AVC AAC MP4)
+[NC-Raws] 别当欧尼酱了！ / Oniichan wa Oshimai! - 01 (B-Global 1920x1080 HEVC AAC MKV)

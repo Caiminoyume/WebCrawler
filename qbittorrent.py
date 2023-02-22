@@ -1,4 +1,5 @@
 import qbittorrentapi as qba
+import web as animeweb
 
 
 def debug():
@@ -22,6 +23,24 @@ def getqb(ip, port, user, pwd):
     print(f'qBittorrent: {qb.app.version}')
     print(f'qBittorrent Web API: {qb.app.web_api_version}')
     return qb
+
+
+class oitsukuanime:
+    def __init__(self, animeID):
+        self.qb = getqb('192.168.100.1', '5080', 'admin', 'adminadmin')
+        self.animeID = animeID
+        self.anime = animeweb.animeweb(animeID)
+
+    def getanimeepisode(self, episode):
+        for groupID in self.anime.groups['ID']:
+            self.animegroup = animeweb.animegroupweb(self.animeID, groupID)
+            self.animegroup.getvideosdata()
+
+    def animeupdate(self):
+        self.anime.getanimedata()
+
+    def addmagnet(self, magnets, category):
+        self.qb.torrents_add(urls=magnets, category=category)
 
 
 if __name__ == "__main__":
