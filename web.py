@@ -1,6 +1,7 @@
 import requests  # 爬虫请求库
 from lxml import etree  # 解析HTML
 import datetime
+import dataclear as dataclear
 
 
 def debug():  # 测试用
@@ -30,6 +31,9 @@ class animeweb:
         self.staffhttp = ''  # 官网
         self.bangumihttp = ''  # Bangumi计划链接
         self.groups = []  # 各字幕组名称及ID，每个元素都是一个字典，分别有'name''ID'两个键
+
+        # 各种子，每个元素都是一个字典，分别有'groupname''groupID''magnet''information''filesizes''time''data'七个键
+        self.animevideos = []
         self.imagehttp = ''  # 主视觉图链接
         self.image = None  # 主视觉图（requests.content实例）
 
@@ -60,12 +64,21 @@ class animeweb:
             '//p[@class="bangumi-info" and text()="Bangumi番组计划链接："]/a/text()')  # 获取Bangumi计划链接
         picture = html.xpath(
             '//div[@class="bangumi-poster"]/@style')[0].split("'")[1]
-        self.imagehttp = 'https://mikanani.me{}'.format(picture)
-        for item in html.xpath('//ul[@class="list-unstyled"]/li/span/a'):
+        self.imagehttp = 'https://mikanani.me{}'.format(picture)  # 获取图片
+        for item in html.xpath('//ul[@class="list-unstyled"]/li/span/a'):  # 获取字幕组
             groupdata = {}
             groupdata['name'] = item.xpath('text()')[0]
             groupdata['ID'] = item.xpath('@data-anchor')[0][1:]
             self.groups.append(groupdata)
+
+    def getanimevideos(self):
+        if self.groups == []:
+            self.getanimedata()
+        for group in self.groups:
+            animegroup = animegroupweb(self.animeID, group['ID'])
+            animegroup.getvideosdata()
+            for video in animegroup.videosdata:
+                self.animevideos.append({**group, **video})
 
     def getanimeimage(self):
         if self.imagehttp == "":
@@ -93,7 +106,9 @@ class animegroupweb:
         self.animegrouphttp = "https://mikanani.me/Home/ExpandEpisodeTable?bangumiId={}&subtitleGroupId={}&take=200".format(
             self.animeID, self.groupID)  # 指定动漫和指定字幕组的网页链接
         self.animegroupweb = None  # 指定动漫和指定字幕组的网页（requests实例）
-        self.videosdata = []  # 存放一系列视频的信息，其中每个元素都是一个字典，分别有'magnet''message''filesizes''time'四个键
+
+        # 存放一系列视频的信息，其中每个元素都是一个字典，分别有'magnet''filesizes''time''information''data'五个键
+        self.videosdata = []
 
     def getanimegroupweb(self):
         self.animegroupweb = getweb(self.animegrouphttp)
@@ -107,8 +122,9 @@ class animegroupweb:
             data = {}
             data['magnet'] = item.xpath(
                 'td/a[@class="js-magnet magnet-link"]/@data-clipboard-text')[0]
-            data['message'] = item.xpath(
+            data['information'] = item.xpath(
                 'td/a[@class="magnet-link-wrap"]/text()')[0]
+            data['data'] = dataclear.dataclear(data['information'])
             data['filesizes'] = item.xpath('td[2]/text()')[0]
             date, time = item.xpath('td[3]/text()')[0].split()
             year, month, day = map(int, date.split("/"))
