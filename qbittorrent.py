@@ -1,7 +1,6 @@
 import qbittorrentapi as qba
 import web as animeweb
 from configparser import ConfigParser
-import dataclear
 
 cfg = ConfigParser()
 cfg.read('./config/qbittorrent.ini')
